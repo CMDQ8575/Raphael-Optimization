@@ -19,3 +19,4 @@ Raphael (Redmi K20 Pro) Miui10 (9.7.11 Android 9) , with offical kernel and modi
 9. Change some permissions and enhance charging speed.
 10. Some optimization in system.prop(maybe not works).
 11. CTS file modify.
+12. Disable SELinux.
