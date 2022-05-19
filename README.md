@@ -4,7 +4,7 @@ A magisk module for Raphael (Redmi K20 Pro) to enhance performance and save batt
 
 ## Support Devices
 
-Raphael (Redmi K20 Pro) Miui10(9.7.11), with offical kernel and modify service.jar.
+Raphael (Redmi K20 Pro) Miui10 (9.7.11) , with offical kernel and modify service.jar.
 
 ## Feature:
 
