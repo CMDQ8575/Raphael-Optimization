@@ -1,7 +1,5 @@
 ## Raphael-Optimization
 
-## Introduction 
-
 A magisk module for Raphael (Redmi K20 Pro) to enhance performance and save battery.
 
 ## Support Devices
