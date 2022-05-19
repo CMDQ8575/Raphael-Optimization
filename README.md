@@ -4,19 +4,17 @@ A magisk module for Raphael (Redmi K20 Pro) to enhance performance and save batt
 
 ## Support Devices
 
-Raphael (Redmi K20 Pro) Miui10 (9.7.11 Android 9) , with offical kernel and modify service.jar.
+Raphael (Redmi K20 Pro) Miui10 (9.7.11 Android 9) , with offical kernel.
 
 ## Feature:
 
 1. Change I/O settings to save battery.
-2. Disable system logs and some useless services.
+2. Disable SELinux, system log services and some useless services.
 3. Remove all thermal binary files and settings.
 4. Some speed and touching optimization.
-5. ~Remove the useless system apps(some apks need to modify the service.jar to avoid bootloop).~
-6. Change governor and decline the max and min frequency to save battery.
-7. Remove the Doze whitelist.
-8. Remove ADs by hosts.
-9. Change some permissions and enhance charging speed.
-10. Some optimization in system.prop(maybe not works).
-11. CTS file modify.
-12. Disable SELinux.
+5. Change governor and decline the max and min frequency to save battery.
+6. Remove the Doze whitelist.
+7. Remove ADs by hosts.
+8. Change some permissions and enhance charging speed.
+9. Some optimization in system.prop(maybe not works).
+10. CTS file modify.
