@@ -1,14 +1,14 @@
-# Raphael-Optimization
+## Raphael-Optimization
 
 ## Introduction 
 
 A magisk module for Raphael (Redmi K20 Pro) to enhance performance and save battery.
 
-#Support Devices
+## Support Devices
 
 Raphael (Redmi K20 Pro) Miui10(9.7.11), with offical kernel and modify service.jar.
 
-##Feature:
+## Feature:
 
 1. Change I/O settings to save battery.
 2. Disable system logs and some useless services.
