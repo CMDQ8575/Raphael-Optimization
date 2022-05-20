@@ -16,5 +16,4 @@ Raphael (Redmi K20 Pro) Miui10 (9.7.11 Android 9) , with offical kernel.
 6. Remove the Doze whitelist.
 7. Remove ADs by hosts.
 8. Change some permissions and enhance charging speed.
-9. Some optimization in system.prop(maybe not works).
-10. CTS file modify.
+9. System.prop modify and pass CTS test (maybe not works) .
