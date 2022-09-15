@@ -31,7 +31,6 @@
 -->
 
 <config>
-    <!-- These are telephony components that need to freely run in the background -->
     <!-- These telephony applications need access to non-[System]SDK APIs -->
     <hidden-api-whitelisted-app package="com.qualcomm.uimremoteserver" />
     <hidden-api-whitelisted-app package="com.qualcomm.uimremoteclient" />
@@ -91,11 +90,12 @@
     <hidden-api-whitelisted-app package="com.qti.vtloopback " />
     <hidden-api-whitelisted-app package="com.android.bluetooth" />
     <hidden-api-whitelisted-app package="org.codeaurora.bluetooth" />
-    <hidden-api-whitelisted-app package="org.codeaurora.bluetooth.hidtestapp" />
     <hidden-api-whitelisted-app package="com.qualcomm.qti.qmmi" />
     <hidden-api-whitelisted-app package="com.qualcomm.qti.perfdump" />
     <hidden-api-whitelisted-app package="com.qualcomm.wfd.client" />
     <hidden-api-whitelisted-app package="com.qualcomm.wfd.service" />
     <hidden-api-whitelisted-app package="com.qualcomm.qti.server.wigigapp" />
     <hidden-api-whitelisted-app package="com.qti.service.colorservice" />
+    <!-- These are location components that need to freely run in the background -->
+    <allow-implicit-broadcast action="org.codeaurora.intent.action.CALL_COMPOSER_INFO" />
 </config>

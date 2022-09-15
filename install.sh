@@ -10,8 +10,8 @@ print_modname() {
 }
 REPLACE=""
 on_install() {
-  if [ $API != 28 ]; then
-    abort "! Only support Android 9.0"
+  if [ $API != 30 ]; then
+    abort "! Only support Android 11"
   fi
   ui_print "- Extracting module files"
   unzip -o "$ZIPFILE" 'system/*' -d $MODPATH >&2
