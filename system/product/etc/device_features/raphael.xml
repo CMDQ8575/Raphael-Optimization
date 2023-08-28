@@ -241,7 +241,7 @@
     <!--whether rotate the final image in camera isp-->
     <bool name="is_camera_isp_rotated">false</bool>
     <!--max cpu freq of the device-->
-    <integer name="cpu_max_freq">290</integer>
+    <integer name="cpu_max_freq">284</integer>
     <!--Successful flag of camera continuous auto focus  result-->
     <integer name="camera_focus_success_flag">2</integer>
     <!--total steps number of camera compensation-->
@@ -324,50 +324,6 @@
     <bool name="enable_flash_global">true</bool>
     <!-- Support Sign Verify In Cust Partition-->
     <bool name="support_sign_verify_in_cust">true</bool>
-    <!--Add for the system data-app which could uninstall by user-->
-    <string-array name="system_data_packagename_list">
-        <item>com.xiaomi.pass</item>
-        <item>com.xiaomi.scanner</item>
-        <item>com.xiaomi.gamecenter</item>
-        <item>com.miui.weather2</item>
-        <item>com.miui.notes</item>
-        <item>com.miui.compass</item>
-        <item>com.miui.calculator</item>
-        <item>com.android.email</item>
-        <item>com.miui.cleanmaster</item>
-        <item>com.mi.misupport</item>
-        <item>com.duokan.reader</item>
-        <item>com.mfashiongallery.emag</item>
-        <item>com.miui.personalassistant</item>
-        <item>com.miui.voip</item>
-        <item>com.miui.yellowpage</item>
-        <item>com.xiaomi.midrop</item>
-        <item>com.android.midrive</item>
-        <item>com.xiaomi.drivemode</item>
-        <item>com.miui.smarttravel</item>
-    </string-array>
-    <!--system data-app path list -->
-    <string-array name="system_data_path_list">
-        <item>/system/data-app/XMPass/XMPass.apk</item>
-        <item>/system/data-app/MiuiScanner/MiuiScanner.apk</item>
-        <item>/system/data-app/GameCenter/GameCenter.apk</item>
-        <item>/system/data-app/Weather/Weather.apk</item>
-        <item>/system/data-app/Notes/Notes.apk</item>
-        <item>/system/data-app/MiuiCompass/MiuiCompass.apk</item>
-        <item>/system/data-app/Calculator/Calculator.apk</item>
-        <item>/system/data-app/Email/Email.apk</item>
-        <item>/system/data-app/CleanMaster/CleanMaster.apk</item>
-        <item>/system/data-app/MiSupport/MiSupport.apk</item>
-        <item>/system/data-app/com.duokan.reader/com.duokan.reader.apk</item>
-        <item>/system/data-app/MiGalleryLockscreen/MiGalleryLockscreen.apk</item>
-        <item>/system/data-app/PersonalAssistant/PersonalAssistant.apk</item>
-        <item>/system/data-app/MiuiVoip/MiuiVoip.apk</item>
-        <item>/system/data-app/YellowPage/YellowPage.apk</item>
-        <item>/system/data-app/MiDrop/MiDrop.apk</item>
-        <item>/system/data-app/MiDrive/MiDrive.apk</item>
-        <item>/system/data-app/MiuiDriveMode/MiuiDriveMode.apk</item>
-        <item>/system/data-app/SmartTravel/SmartTravel.apk</item>
-    </string-array>
     <!--whether surpport paper mode animation-->
     <bool name="support_papermode_animation">true</bool>
     <!--whether paper mode and screen effect is compatible-->
@@ -456,16 +412,24 @@
     <integer name="fod_solution">3</integer>
     <!-- whether support low brightness FOD -->
     <bool name="support_low_brightness_fod">false</bool>
-    <bool name="support_papermode_animation">true</bool>
-    <bool name="support_smart_eyecare">true</bool>
+    <!-- Whether support decrease brightness for specific apps -->
+    <bool name="support_decrease_brightness_spec_app">true</bool>
+    <!-- support mi game countdown -->
+    <bool name="support_mi_game_countdown">true</bool>
+    <!-- whether support Macro Keyboard -->
+    <bool name="support_mi_game_macro">true</bool>
+    <!-- whether support paper eyecare-->
     <bool name="support_paper_eyecare">true</bool>
+    <!-- default color temp for paper eyecare -->
     <float name="paper_eyecare_default_value">91.0</float>
-    <integer name="paper_eyecare_default_texture">13</integer>
+    <!-- default texture for paper eyecare -->
+    <integer name="paper_eyecare_default_texture">18</integer>
+    <!-- texture min value for paper eyecare -->
     <integer name="paper_eyecare_min_texture">0</integer>
-    <integer name="paper_eyecare_max_texture">25</integer>
+    <!-- texture max value for paper eyecare -->
+    <integer name="paper_eyecare_max_texture">35</integer>
+    <bool name="support_SR_for_image_display">true</bool>
+    <bool name="support_game_dim">true</bool>
     <bool name="support_mi_game_countdown">true</bool>
     <bool name="support_game_mi_time">true</bool>
-    <bool name="support_game_gunsight">true</bool>
-    <bool name="support_SR_for_image_display">true</bool>
 </features>
-    <bool name="support_game_gunsight">true</bool>

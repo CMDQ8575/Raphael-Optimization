@@ -5,6 +5,15 @@ persist.vendor.camera.multicam.framesync=1
 persist.vendor.camera.multicam.hwsync=TRUE
 persist.vendor.camera.privapp.list=com.android.camera
 persist.vendor.camera.picturesize.limit.enable=false
-persist.sys.miui.sdk.dbg
 ro.boot.camera.config=_pro
 ro.com.google.lens.oem_camera_package=com.android.camera
+persist.sys.brightmillet.enable=true
+persist.sys.millet.newversion=true
+persist.sys.powmillet.enable=true
+persist.vendor.gnss.hpLocSetUI=1
+ro.crypto.state=encrypted
+debug.sf.use_phase_offsets_as_durations=1
+debug.sf.late.sf.duration=10500000
+debug.sf.late.app.duration=20500000
+debug.sf.treat_170m_as_sRGB=1
+debug.sf.earlyGl.app.duration=16600000

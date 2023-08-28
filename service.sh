@@ -16,7 +16,7 @@ do
 done
 
 # Color
-echo 256 230 256 > /sys/devices/platform/kcal_ctrl.0/kcal
+echo 256 220 256 > /sys/devices/platform/kcal_ctrl.0/kcal
 
 # I/O
 for i in loop0 loop1 loop2 loop3 loop4 loop5 loop6 loop7 sda sdb sdc sdd sde sdf
@@ -39,14 +39,14 @@ am kill mdnsd
 killall -9 mdnsd
 am kill mdnsd.rc
 killall -9 mdnsd.rc
-am kill logd
-killall -9 logd
-am kill logd.rc
-killall -9 logd.rc
-stop logd 2> /dev/null
-killall -9 logd 2> /dev/null
-stop logd.rc 2> /dev/null
-killall -9 logd.rc 2> /dev/null
+#am kill logd
+#killall -9 logd
+#am kill logd.rc
+#killall -9 logd.rc
+#stop logd 2> /dev/null
+#killall -9 logd 2> /dev/null
+#stop logd.rc 2> /dev/null
+#killall -9 logd.rc 2> /dev/null
 am kill tcpdump
 killall -9 tcpdump
 am kill cnss_diag
@@ -63,13 +63,20 @@ echo "N" > /sys/kernel/debug/debug_enabled
 
 # Charging
 chmod 0644 /sys/class/power_supply/battery/constant_charge_current_max
+chmod 0644 /sys/class/power_supply/main/constant_charge_current_max
 chmod 0644 /sys/class/power_supply/main/current_max
+chmod 0644 /sys/class/power_supply/usb/current_max
+chmod 0644 /sys/class/power_supply/usb/boost_current
 echo 0 > /sys/class/power_supply/battery/step_charging_enabled
+echo 6000000 > /sys/class/power_supply/battery/constant_charge_current_max
+echo 1 > /sys/class/power_supply/usb/boost_current
 # echo 4200000 > /sys/class/power_supply/bms/charge_full
 
 # Governer
 echo 1 > /sys/module/thermal_sys/parameters/skip_therm
-echo 105000 > /sys/class/thermal/thermal_zone32/trip_point_0_temp
+echo 125000 > /sys/class/thermal/thermal_zone15/trip_point_0_temp
+echo 125000 > /sys/class/thermal/thermal_zone27/trip_point_0_temp
+echo 125000 > /sys/class/thermal/thermal_zone32/trip_point_0_temp
 lock "0:0" /sys/module/cpu_boost/parameters/input_boost_freq
 lock "0" /sys/module/cpu_boost/parameters/input_boost_ms
 lock "0:0" /sys/module/cpu_boost/parameters/powerkey_input_boost_freq
@@ -77,9 +84,9 @@ lock "0" /sys/module/cpu_boost/parameters/powerkey_input_boost_ms
 lock "N" /sys/module/cpu_boost/parameters/sched_boost_on_powerkey_input
 
 # Frequency
-echo 300000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
 echo 345000000 > /sys/class/kgsl/kgsl-3d0/devfreq/max_freq
-echo 1036000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
+echo 300000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+echo 1036800 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
 echo 2016000 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
 echo 300000 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/hispeed_freq
 echo 100 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/hispeed_load
@@ -87,6 +94,7 @@ echo 710400 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/hispeed_freq
 echo 100 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/hispeed_load
 echo 825600 > /sys/devices/system/cpu/cpu7/cpufreq/schedutil/hispeed_freq
 echo 100 > /sys/devices/system/cpu/cpu7/cpufreq/schedutil/hispeed_load
+echo 5000 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_rate_limit_us
 echo 762 > /sys/class/devfreq/soc:qcom,cpu-llcc-ddr-bw/max_freq
 echo 2288 > /sys/class/devfreq/soc:qcom,cpu-cpu-llcc-bw/max_freq
 
@@ -95,3 +103,5 @@ fstrim -v /data
 fstrim -v /cache
 fstrim -v /system
 fstrim -v /vendor
+
+set start vsync
